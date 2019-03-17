@@ -1,0 +1,70 @@
+1. What are the names of all the countries in the databases which start with the letter "B"
+(sorted by their names)?
+  Ans:
+   SELECT *
+
+   FROM country
+
+   WHERE country  LIKE 'B%' 
+   
+ORDER BY country_id
+   
+   RESULT:
+   
+  country_id	         country	   last_update
+       11	        Bahrain	           15-02-2006 04:44
+       12	        Bangladesh	   15-02-2006 04:44
+       13	        Belarus	           15-02-2006 04:44
+       14	        Bolivia	           15-02-2006 04:44
+       15	        Brazil	           15-02-2006 04:44
+       16	        Brunei	           15-02-2006 04:44
+       17	        Bulgaria	   15-02-2006 04:44
+
+2. Return the first names (sorted) of all the actors with the last name "berry".
+  Ans:
+    SELECT *
+    
+FROM actor
+    
+WHERE last_name LIKE 'BERRY'
+    ORDER BY first_name
+ 
+   RESULT:
+
+    actor_id	first_name	last_name	last_update
+          91	CHRISTOPHER	 BERRY	        15-02-2006 04:34
+          60	HENRY	         BERRY	        15-02-2006 04:34
+          12	KARL	         BERRY	        15-02-2006 04:34
+   
+3. Find all the films whose length is more than 184 (inclusive). Order the results by the length
+(and for films with the same length order them by their name). Return their title and the length.
+   Ans:
+     SELECT  title , length
+
+     FROM film
+     
+WHERE length >= 184
+     
+ORDER BY length,title
+
+  RESULT:
+   
+       title	      length
+   CONSPIRACY SPIRIT	184
+   CRYSTAL BREAKING	184
+   KING EVOLUTION	184
+   MOONWALKER FOOL	184
+   SMOOCHY CONTROL	184
+   SONS INTERVIEW	184
+   SORORITY QUEEN	184
+   THEORY MERMAID	184
+   CHICAGO NORTH	185
+   CONTROL ANTHEM	185
+   DARN FORRESTER	185
+   GANGS PRIDE	        185
+   HOME PITY	        185
+   MUSCLE BRIGHT	185
+   POND SEATTLE	        185
+   SOLDIERS EVOLUTION	185
+   SWEET BROTHERHOOD	185
+   WORST BANGER	        185
